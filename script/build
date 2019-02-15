@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+default_tag="babelts-starter:latest"
+tag="${1:-$default_tag}"
+
+docker build \
+  --file Prod.dockerfile \
+  --tag "$tag" \
+  .

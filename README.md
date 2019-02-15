@@ -18,6 +18,7 @@ in TypeScript and using [`@babel/preset-typescript`]. It requires [Docker].
 ### [scripts to rule them all]
 
 - `script/bootstrap` - installs/updates all dependencies
+- `script/build` - builds a Production-ready docker image
 - `script/setup` - sets up a project to be used for the first time
 - `script/update` - updates a project to run at its current version
 - `script/server` - starts app
