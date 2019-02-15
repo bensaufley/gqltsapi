@@ -4,4 +4,8 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-# TODO
+docker build \
+  --file Dev.dockerfile \
+  --target test \
+  --tag babelts-starter:test \
+  .

@@ -1,4 +1,4 @@
-FROM node:11.9.0-alpine
+FROM node:11.9.0-alpine as dev
 LABEL maintainer="Ben Saufley <contact@bensaufley.com>"
 RUN adduser -D -u 1002 scratchuser
 
@@ -22,4 +22,10 @@ COPY . /usr/src/babelts-starter
 
 USER scratchuser
 
-EXPOSE 8080 8088
+FROM node:11.9.0-alpine as test
+LABEL maintainer="Ben Saufley <contact@bensaufley.com>"
+
+WORKDIR /usr/src/babelts-starter
+COPY --from=dev /usr/src/babelts-starter .
+
+RUN [ "yarn", "test" ]

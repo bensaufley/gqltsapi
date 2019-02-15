@@ -1,3 +1,1 @@
-(() => {
-  console.log('goodbye!');
-})();
+// code goes here

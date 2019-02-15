@@ -3,6 +3,16 @@
 babelts-starter is a basic setup for a server-side Node application written
 in TypeScript and using [`@babel/preset-typescript`]. It requires [Docker].
 
+## Structure
+
+- TypeScript code to be compiled goes in [`src`](/src).
+- Tests go in [`test/src`](/test/src) and should mimick the directory structure
+  of `src` with the addition of `.spec` to the filename. E.g., if you have a
+  file at `src/lib/myFunc.ts`, your test would be at
+  `test/src/lib/myFunc.spec.ts`.
+- Running `yarn build` empties [`.build`](/build) and outputs compiled JS to
+  that directory.
+
 ## Scripts
 
 ### [scripts to rule them all]
@@ -17,7 +27,7 @@ in TypeScript and using [`@babel/preset-typescript`]. It requires [Docker].
 
 ### Other [Yarn]-based scripts
 
-- `yarn build`: builds TS files to JS files in [`.build`](/build) directory
+- `yarn build`: builds TS files to JS files in `.build` directory
 - `yarn lint:ts`: Runs `tslint` on TypeScript codebase
 - `yarn lint:types`: Runs `tsc` to type-check TypeScript codebase
 
