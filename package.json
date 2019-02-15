@@ -1,0 +1,37 @@
+{
+  "name": "babelts-starter",
+  "version": "0.1.0",
+  "description": "A basic starter configuration for @babel/preset-typescript for a server-side application",
+  "main": ".build/index.js",
+  "repository": "https://github.com/bensaufley/babelts-starter",
+  "author": "Ben Saufley <contact@bensaufley.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.9.4",
+    "@types/sinon": "^7.0.6",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0",
+    "sinon": "^7.2.3",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.3.3"
+  },
+  "scripts": {
+    "build": "yarn clean && npx babel ./src --out-dir ./.build --extensions '.ts'",
+    "clean": "rm -rf ./.build/![.keep]*",
+    "dev": "nodemon ./src/index.ts",
+    "lint:ts": "tslint -p tsconfig.json src/**/*.ts",
+    "lint:types": "tsc --noEmit",
+    "test": "NODE_ENV=test nyc mocha"
+  },
+  "dependencies": {}
+}

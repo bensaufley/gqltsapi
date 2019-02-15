@@ -1,0 +1,24 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Docker: Attach to Node",
+      "type": "node",
+      "request": "attach",
+      "remoteRoot": "/usr/src/gqlapi",
+      "address": "0.0.0.0",
+      "port": 8088,
+      "restart": true,
+      "timeout": 60000,
+      "outFiles": [
+        "/usr/src/gqlapi/.build/**/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js"
+      ],
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if ! type "docker-compose" > /dev/null; then
+  echo "Could not find command docker-compose. Please make sure you have installed Docker:"
+  echo
+  echo "https://docs.docker.com/install/"
+  exit 1
+fi

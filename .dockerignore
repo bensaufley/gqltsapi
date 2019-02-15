@@ -1,0 +1,8 @@
+tslint.json
+.build
+.vscode
+node_modules
+script
+yarn-error.log
+coverage
+.nyc_output

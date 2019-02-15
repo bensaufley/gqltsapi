@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dev.dockerfile
+    command: yarn dev
+    ports:
+      - 8080:8080
+      - 8088:8088
+    volumes:
+      - .:/usr/src/babelts-starter
+      - /usr/src/babelts-starter/.build
+      - /usr/src/babelts-starter/node_modules

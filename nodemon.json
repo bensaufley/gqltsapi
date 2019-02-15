@@ -1,0 +1,14 @@
+{
+  "execMap": {
+    "ts": "node -r @babel/register --nolazy --inspect=0.0.0.0:8088"
+  },
+  "ext": "ts",
+  "ignore": [
+    "node_modules/"
+  ],
+  "legacyWatch": true,
+  "verbose": true,
+  "watch": [
+    "src/"
+  ]
+}

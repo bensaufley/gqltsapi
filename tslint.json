@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "ter-arrow-parens": [true, "always"],
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never", "esSpecCompliant": true }]
+  }
+}
