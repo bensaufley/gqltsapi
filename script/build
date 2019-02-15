@@ -4,7 +4,7 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-default_tag="babelts-starter:latest"
+default_tag="gqltsapi:latest"
 tag="${1:-$default_tag}"
 
 docker build \

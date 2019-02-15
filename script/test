@@ -7,5 +7,5 @@ cd "$(dirname "$0")/.."
 docker build \
   --file Dev.dockerfile \
   --target test \
-  --tag babelts-starter:test \
+  --tag gqltsapi:test \
   .

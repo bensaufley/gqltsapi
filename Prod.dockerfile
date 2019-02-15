@@ -9,9 +9,9 @@ RUN yarn install
 
 ENV NODE_ENV production
 
-WORKDIR /usr/src/babelts-starter
+WORKDIR /usr/src/gqltsapi
 RUN cp -a /tmp/node_modules .
-COPY . /usr/src/babelts-starter
+COPY . /usr/src/gqltsapi
 
 RUN yarn build
 
@@ -25,9 +25,9 @@ WORKDIR /tmp
 COPY package.json yarn.lock /tmp/
 RUN yarn install --prod
 
-WORKDIR /usr/src/babelts-starter
+WORKDIR /usr/src/gqltsapi
 RUN mv /tmp/node_modules /tmp/package.json /tmp/yarn.lock .
-COPY --from=builder /usr/src/babelts-starter/.build/. .
+COPY --from=builder /usr/src/gqltsapi/.build/. .
 
 USER scratchuser
 

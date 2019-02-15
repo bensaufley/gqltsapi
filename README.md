@@ -1,7 +1,8 @@
-# babelts-starter
+# gqltsapi
 
-babelts-starter is a basic setup for a server-side Node application written
-in TypeScript and using [`@babel/preset-typescript`]. It requires [Docker].
+gqltsapi is a basic setup for a server-side Node application written
+in TypeScript and using [`@babel/preset-typescript`] and [GraphQL]. It requires
+[Docker].
 
 ## Structure
 
@@ -33,6 +34,7 @@ in TypeScript and using [`@babel/preset-typescript`]. It requires [Docker].
 - `yarn lint:types`: Runs `tsc` to type-check TypeScript codebase
 
 [`@babel/preset-typescript`]: https://babeljs.io/docs/en/babel-preset-typescript
+[GraphQl]: https://graphql.org/
 [Docker]: https://www.docker.com
 [scripts to rule them all]: https://githubengineering.com/scripts-to-rule-them-all/
 [Yarn]: https://yarnpkg.com
