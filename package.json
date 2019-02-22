@@ -13,14 +13,23 @@
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
     "@types/chai": "^4.1.7",
+    "@types/events": "^3.0.0",
+    "@types/graphql": "^14.0.7",
+    "@types/koa": "^2.0.48",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.4",
+    "@types/pg": "^7.4.13",
     "@types/sinon": "^7.0.6",
     "chai": "^4.2.0",
+    "db-migrate": "^0.11.5",
+    "db-migrate-pg": "^0.5.0",
+    "db-migrate-plugin-babel-typescript": "bensaufley/db-migrate-plugin-babel-typescript",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.10",
     "nyc": "^13.3.0",
+    "plop": "^2.2.0",
     "sinon": "^7.2.3",
+    "ts-node": "^8.0.2",
     "tslint": "^5.12.1",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.3.3"
@@ -34,11 +43,10 @@
     "test": "NODE_ENV=test nyc mocha"
   },
   "dependencies": {
-    "@types/graphql": "^14.0.7",
-    "@types/koa": "^2.0.48",
     "apollo-server-koa": "^2.4.2",
     "graphql": "^14.1.1",
     "graphql-tools": "^4.0.4",
-    "koa": "^2.7.0"
+    "koa": "^2.7.0",
+    "pg": "^7.8.0"
   }
 }

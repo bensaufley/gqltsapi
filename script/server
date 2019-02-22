@@ -6,10 +6,10 @@ cd "$(dirname "$0")/.."
 
 script/update
 
-docker-compose up
+APP_ENV=dev docker-compose up
 
 status=$?
 
-docker-compose down
+APP_ENV=dev docker-compose down
 
 exit $status

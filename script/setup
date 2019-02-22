@@ -6,4 +6,4 @@ cd "$(dirname "$0")/.."
 
 script/bootstrap
 
-docker-compose build
+APP_ENV=dev docker-compose build

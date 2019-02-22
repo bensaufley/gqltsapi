@@ -5,8 +5,15 @@ services:
     build:
       context: .
       dockerfile: Dev.dockerfile
-      target: dev
-    command: yarn dev
+      target: "${APP_ENV:?APP_ENV}"
+    command: yarn "${APP_ENV:?APP_ENV}"
+    depends_on:
+      - db
+    environment:
+      PGHOST: db
+      PGPASS: pgpass
+      PGUSER: pguser
+      PGDATABASE: "gqltsapi_${APP_ENV:?APP_ENV}"
     ports:
       - 8080:8080
       - 8088:8088
@@ -14,3 +21,9 @@ services:
       - .:/usr/src/gqltsapi
       - /usr/src/gqltsapi/.build
       - /usr/src/gqltsapi/node_modules
+  db:
+    environment:
+      POSTGRES_PASSWORD: pgpass
+      POSTGRES_USER: pguser
+      POSTGRES_DB: "gqltsapi_${APP_ENV:?APP_ENV}"
+    image: postgres:11.2-alpine

@@ -6,3 +6,5 @@ script
 yarn-error.log
 coverage
 .nyc_output
+plopfile.js
+plop-templates

@@ -1,0 +1,13 @@
+{
+  "defaultEnv": {"ENV": "NODE_ENV"},
+  "development": {"driver": "pg"},
+  "test": {"driver": "pg"},
+  "production": {"driver": "pg"},
+  "pg": {
+    "driver": "pg",
+    "user": {"ENV": "PGUSER"},
+    "password": {"ENV": "PGPASS"},
+    "host": {"ENV": "PGHOST"},
+    "database": {"ENV": "PGDATABASE"}
+  }
+}
