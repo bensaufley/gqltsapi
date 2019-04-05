@@ -7,32 +7,32 @@
   "author": "Ben Saufley <contact@bensaufley.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-typescript": "^7.1.0",
-    "@babel/register": "^7.0.0",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "^7.4.0",
     "@types/chai": "^4.1.7",
     "@types/events": "^3.0.0",
-    "@types/graphql": "^14.0.7",
+    "@types/graphql": "^14.2.0",
     "@types/koa": "^2.0.48",
     "@types/mocha": "^5.2.6",
-    "@types/node": "^11.9.4",
-    "@types/pg": "^7.4.13",
-    "@types/sinon": "^7.0.6",
+    "@types/node": "^11.13.0",
+    "@types/pg": "^7.4.14",
+    "@types/sinon": "^7.0.11",
     "chai": "^4.2.0",
     "db-migrate": "^0.11.5",
     "db-migrate-pg": "^0.5.0",
     "db-migrate-plugin-babel-typescript": "bensaufley/db-migrate-plugin-babel-typescript",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.2",
     "nodemon": "^1.18.10",
     "nyc": "^13.3.0",
-    "plop": "^2.2.0",
-    "sinon": "^7.2.3",
-    "ts-node": "^8.0.2",
-    "tslint": "^5.12.1",
+    "plop": "^2.3.0",
+    "sinon": "^7.3.1",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.15.0",
     "tslint-config-airbnb": "^5.11.1",
-    "typescript": "^3.3.3"
+    "typescript": "^3.4.1"
   },
   "scripts": {
     "build": "yarn clean && npx babel ./src --out-dir ./.build --extensions '.ts'",
@@ -43,10 +43,10 @@
     "test": "NODE_ENV=test nyc mocha"
   },
   "dependencies": {
-    "apollo-server-koa": "^2.4.2",
-    "graphql": "^14.1.1",
+    "apollo-server-koa": "^2.4.8",
+    "graphql": "^14.2.1",
     "graphql-tools": "^4.0.4",
     "koa": "^2.7.0",
-    "pg": "^7.8.0"
+    "pg": "^7.9.0"
   }
 }

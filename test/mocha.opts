@@ -1,2 +1,2 @@
---require test/support/register
+--require ./register
 test/**/*.spec.ts
