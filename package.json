@@ -43,7 +43,7 @@
     "test": "NODE_ENV=test nyc mocha"
   },
   "dependencies": {
-    "apollo-server-koa": "^2.4.8",
+    "apollo-server-koa": "^2.14.2",
     "graphql": "^14.2.1",
     "graphql-tools": "^4.0.4",
     "koa": "^2.7.0",
